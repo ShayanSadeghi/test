@@ -3,7 +3,7 @@ const hbs = require('hbs');
 
 let app = express();
 
-
+const port = process.env.PORT || 3000;
 
 hbs.registerPartials(__dirname + '/views/partials');
 
@@ -46,14 +46,6 @@ app.get('/bad', (req, res) => {
         errorMessage: 'Here is the error message'
     });
 });
-app.listen(3000, () => {
-    console.log('I am using port 3000 to serving up My testing website');
+app.listen(port, () => {
+    console.log(`the port is ${port}`);
 });
-
-
-/* Git
-    git.scm.com
-    in terminal in the project folder: git init
-    
-
- */
